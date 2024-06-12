@@ -1,9 +1,4 @@
-Applies to version: 0.4
-
-# File and folder structure
-The track folder is located in the same folder as TECHMANIA.exe, named `Tracks`. Each subfolder in `Tracks` corresponds to one track. Each track folder contains all resource files, as well as a `track.tech` file that contains the patterns and metadata. The content of `track.tech` is an object of type [TrackBase](https://github.com/techmania-team/techmania/blob/master/TECHMANIA/Assets/Scripts/Serializable/Track.cs), serialized as JSON.
-
-By default, a track folder is named `<Artist> - <Title> - <creation time>`, but the name does not matter. The game reads in artist and title from `track.tech`, not the folder's name.
+Applies to version: 2.2
 
 # Supported media formats
 * Audio: .wav, .ogg
@@ -12,5 +7,6 @@ By default, a track folder is named `<Artist> - <Title> - <creation time>`, but 
 
 # Other notes
 
-* The preview button in the bottom bar is always grayed out. This is a placeholder for a feature to be added in a future version.
+* Click the preview button at the bottom to launch the game and preview the pattern, starting from the scan that the scanline is in. The preview will launch in practice mode, and pressing Esc will return to the editor instead of pausing.
 * The editor will always leave at least 1 empty scan at the end of the pattern. If you place a note in the last scan, a new scan will be added. However, removing all notes from the last scan will not delete that scan; close and re-open a pattern to delete excessive empty scans.
+* If you click a hold, repeat hold or drag note, then create a new note of the same type, the new note will be a copy of the note you clicked earlier (where allowed; does not copy keysounds). This is called quick copy.
